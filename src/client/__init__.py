@@ -6,7 +6,6 @@ from flask import Flask, send_from_directory
 from loguru import logger
 
 from client.utils import frontend_resource_dir, project_resource_dir
-from client.webviewapi import WebViewAPI
 
 app = Flask(__name__, static_folder=frontend_resource_dir() / "app")
 
@@ -33,7 +32,6 @@ def main():
     webview.create_window(
         "DeltaNet client",
         url="http://localhost:5000",
-        js_api=WebViewAPI(),
         min_size=(400, 300),
     )
     webview.start(debug=True)

@@ -1,2 +1,0 @@
-class WebViewAPI:
-    pass
