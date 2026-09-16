@@ -1,7 +1,7 @@
 [project]
 name = "delta-social-network"
 version = "0.1.0"
-description = "Multifunctional self-hosted federative configurable client-server social-network."
+description = "Multifunctional self-hosted federative configurable client-server social network."
 authors = [
     {name = "Your Name",email = "you@example.com"}
 ]
