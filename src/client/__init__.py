@@ -2,22 +2,10 @@ import threading
 import time
 
 import webview
-from flask import Flask, send_from_directory
 from loguru import logger
 
+from client.flask import app
 from client.utils import frontend_resource_dir, project_resource_dir
-
-app = Flask(__name__, static_folder=frontend_resource_dir() / "app")
-
-
-@app.route("/")
-def index():
-    return send_from_directory(frontend_resource_dir(), "index.html")
-
-
-@app.route("/<path:path>")
-def serve(path):
-    return send_from_directory(frontend_resource_dir(), path)
 
 
 def main():
