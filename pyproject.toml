@@ -5,8 +5,10 @@ description = "Multifunctional self-hosted federative configurable client-server
 authors = [
     {name = "Your Name",email = "you@example.com"}
 ]
+
 license = "GPLv3"
 requires-python = ">=3.14"
+
 dependencies = [
 ]
 
@@ -14,3 +16,13 @@ dependencies = [
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+    {include = "client", from = "src"},
+    {include = "server", from = "src"}
+]
+
+[tool.poetry.scripts]
+deltanet-server = "src.server:main"
+deltanet-client = "src.client:main"
